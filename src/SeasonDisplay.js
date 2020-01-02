@@ -11,7 +11,7 @@ const getSeason = (lat, month) => {
 const SeasonDisplay = props => {
   const season = getSeason(props.lat, new Date().getMonth());
   const message =
-    season === "Summer"
+    season === "Winter"
       ? "It is cold lets go snow boarding"
       : "It is warm lets go surfing";
 
