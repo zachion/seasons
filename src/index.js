@@ -17,7 +17,7 @@ class App extends React.Component {
     console.log('Component was just updated - it rerendered!');
   }
 
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error Message: {this.state.errorMessage}</div>;
     }
@@ -25,6 +25,10 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
     return <Spinner message="Please accept location request" />;
+  }
+
+  render() {
+    return this.renderContent();
   }
 }
 
